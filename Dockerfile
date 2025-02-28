@@ -1,14 +1,14 @@
-# Use OpenJDK as base image
+# Use a base image with JDK 17 (or the version your app requires)
 FROM openjdk:17-jdk-slim
 
-# Set working directory inside the container
+# Set the working directory
 WORKDIR /app
 
-# Copy the JAR file to the container
-COPY target/order-service.jar app.jar
+# Copy the build file from target folder (for Maven)
+COPY target/*.jar app.jar
 
-# Expose the application's port (adjust if needed)
-EXPOSE 8080
+# Expose the application port (change if needed)
+EXPOSE 8081
 
-# Command to run the application
+# Run the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
