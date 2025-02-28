@@ -84,7 +84,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.10.1</version> <!-- Change this version -->
+				<version>3.13.0</version> <!-- Change this version -->
 				<configuration>
 					<source>21</source>
 					<target>21</target>
